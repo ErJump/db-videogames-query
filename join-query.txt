@@ -38,8 +38,8 @@ JOIN award_videogame
 JOIN awards
     ON award_videogame.award_id = awards.id
 
-!! 6 - Selezionare categorie e classificazioni PEGI dei videogiochi che hanno ricevuto recensioni da 4 e 5 stelle, mostrandole una sola volta (3363)
-SELECT DISTINCT categories.name, pegi_labels.name
+6 - Selezionare categorie e classificazioni PEGI dei videogiochi che hanno ricevuto recensioni da 4 e 5 stelle, mostrandole una sola volta (3363)
+SELECT DISTINCT videogames.name, categories.name, pegi_labels.name
 FROM categories
 JOIN category_videogame
     ON categories.id = category_videogame.category_id
